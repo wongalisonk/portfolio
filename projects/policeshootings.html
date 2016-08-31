@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Alison Wong</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Portfolio"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<!-- Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="../index.html"><h2 id="name">HI, I'M ALISON</h2></a>
+			<h4 id="tagline">Aspiring UX Designer</h4>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="#" class="selected">Portfolio</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="resume.pdf" target="_blank">Resume</a></li>
+				<li><a href="mailto:wongalisonk@gmail.com">Contact</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<div class="rights">
+				<p>Copyright © 2016</p>
+				<p>Template by <a href="http://www.pixelhint.com" target="_blank">Pixelhint</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+
+	<section class="main clearfix">
+		<section class="shootings top">	
+			<div class="wrapper content_header clearfix">
+				<div class="work_nav">			
+					<ul class="btn clearfix">
+						<li><a href="giftofcomfort.html" class="previous" data-title="Previous"></a></li>
+						<li><a href="../index.html" class="grid" data-title="Portfolio"></a></li>
+						<li><a href="dawgcoffee.html" class="next" data-title="Next"></a></li>
+					</ul>							
+				</div><!-- end work_nav -->
+				<h1 class="title">Police Shootings</h1>
+				<h3 class="subtitle">Front-End Web Development</h3>
+			</div>		
+		</section><!-- end top -->
+
+		<section class="wrapper" id="top">
+			<div class="content">
+				<h1>Introduction</h1>
+				<div class="container-fluid">
+					<div class="col-sm-6">
+						<figure class="figure">
+							<img src="../img/policeshootings/leaflet.png" class="figure-img">
+	  						<figcaption class="figure-caption text-xs-left"><i>Library used for maps</i></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6">
+						<p>To demonstrate how technology can be used to bring awareness to political and social issues, I was assigned to create a map visualization of police shootings that occur in the United States. Data visualization was an important skill to learn because although data is important, the reality is that most people do not bother to analyze it. Using a visual tool to display the information not only allows for the data to be understood more easily, but is more impactful. For example, seeing and understanding that each dot on the map represents a person that got shot is much more jarring than looking at a long data set of text.</p>
+						<p>The interactive map was created using <a href="http://leafletjs.com/" target="_blank">Leaflet.js</a> which is "an open-source JavaScript library for mobile-friendly interactive maps."</p>
+						<br>
+					</div>
+				</div>
+				<br>
+
+				<h1>The Data</h1>
+				<div class="container-fluid">
+					<div class="col-sm-12">
+						<p>This project was created when I was still learning about the basics of front-end web development. As a result, although I could have done some interesting things with the data set, I opted simply to display the locations of all the shootings and the basic information on click (location, description of events). For better differentiation between whether the victim was injured in the shooting or killed, I decided to change the color of the circle where white indicated that the victim was injured, and red indicated that the victim was killed.</p>
+						<p>The opacity of the circles was meant to highlight the concentration of where the shootings occurred. The harder it was to tell the differences between circles indicated a higher concentration of shootings. I thought it would be interesting if people were able to view and sort the data by race/ethnicity. I added a menu on the upper right for viewers to manipulate the data based on ethnicity.</p>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<figure class="figure">
+							<img src="../img/policeshootings/example.png" class="figure-img">
+							<figcaption class="figure-caption text-xs-left"><i>Example showing information on a data point and the menu on the upper right</i></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-12">
+						<h2>The Table</h2>
+						<p>I was required to create a table that complemented the data visualization above. The table I created was a simplistic one, displaying the victims based on gender and on whether the victim was hit or killed. This was calculated by aggregating the data. I chose to display the gender because there was no meaningful way I could have displaying it in the visualization since I had already colored the circles based on outcome (hit or killed).</p>
+						<figure class="figure">
+							<img src="../img/policeshootings/table.png" class="figure-img">
+							<figcaption class="figure-caption text-xs-left"><i>Table at the bottom of the screen</i></figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section><!-- end main -->
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Alison Wong</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Portfolio"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<!-- Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="../index.html"><h2 id="name">HI, I'M ALISON</h2></a>
+			<h4 id="tagline">Aspiring UX Designer</h4>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="#" class="selected">Portfolio</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="resume.pdf" target="_blank">Resume</a></li>
+				<li><a href="mailto:wongalisonk@gmail.com">Contact</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<div class="rights">
+				<p>Copyright © 2016</p>
+				<p>Template by <a href="http://www.pixelhint.com" target="_blank">Pixelhint</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+
+	<section class="main clearfix">
+		<section class="spotify top">	
+			<div class="wrapper content_header clearfix">
+				<div class="work_nav">			
+					<ul class="btn clearfix">
+						<li><a href="welp.html" class="previous" data-title="Previous"></a></li>
+						<li><a href="../index.html" class="grid" data-title="Portfolio"></a></li>
+						<li><a href="giftofcomfort.html" class="next" data-title="Next"></a></li>
+					</ul>							
+				</div><!-- end work_nav -->
+				<h1 class="title">Guess! Spotify</h1>
+				<h3 class="subtitle">API Web Application</h3>
+			</div>		
+		</section><!-- end top -->
+
+		<section class="wrapper" id="top">
+			<div class="content">
+				<h1>Introduction</h1>
+				<div class="container-fluid">
+					<div class="col-sm-6">
+						<p>One of the projects I worked focused on a more specific type of skill in web application: using an API. For this particular assignment, our professor tasked us to use the Spotify API in any way we could think of. The first part of the project, for me at least, was researching and seeing what resources the API provided as well as what data I could access. After that it was time spent brainstorming in order to fulfill the "creative" aspect of the project.</p>
+						<p>For the final project, I leveraged <a href=https://angularjs.org/>AngularJS </a> to help with user experience aspects of the project (more details below).</p>
+						<h4>To play Guess! Spotify click <a href="http://students.washington.edu/aliwong/info343/spotify/" target="_blank">here.</a></h4>
+					</div>
+					<div class="col-sm-6">
+						<figure class="figure">
+							<img src="../img/spotify/intro.png" class="figure-img">
+	  						<figcaption class="figure-caption text-xs-left"><i>Mockup of the final website</i></figcaption>
+						</figure>
+					</div>
+				</div>
+				<br>
+
+				<h1>Looking for Inspiration</h1>
+				<div class="container-fluid">
+					<div class="col-sm-6">
+						<figure class="figure">
+							<img src="../img/spotify/reference.png" class="figure-img">
+							<figcaption class="figure-caption text-xs-left"><i>Screenshot of the Spotify reference website</i></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6">
+						<p>For inspiration for my project, I scoured the API reference pages to see if anything in particular gave me a creative spark. One of the biggest restraints of the API was the fact that it only gave access to 30 second segments of a song rather than the full length. Eventually, I stumbled across information on how to obtain the top 10 tracks of an artist. I began to play around with the idea of creating a guessing game where the player would have to guess the top tracks of the artist of their choice.</p>
+						<p>While this idea sounded simple enough when I decided upon it, it soon became apparent that there were many nuance components I had failed to take into consideration. First, I had to find a way to search the name of the artist that the player inputted. After that I needed to extract that specific artist's unique Spotify ID. This was so I could access the top ten tracks which is returned in JSON format. After a lot of trial and error (and frustration) with numerous tabs open on my web browser, I eventually figured out how to get the data I needed.</p>
+					</div>
+				</div>
+
+				<h1>Pushing on</h1>
+				<div class="container-fluid">
+					<div class="col-sm-5">
+						<p>Next was the randomization of the songs. I wanted to randomize the order the songs were displayed because this provided better user experience for people who wanted to try the game again using the same artist. It would not be as fun if you could simply memorize the order of the songs. In short, the randomization offered better playability overall.</p>
+						<p>The centerpiece of the guessing game was a way to play the 30 second snippet of the song without the title showing. The data set retrieved helpfully provides a link to each song and it was a matter of simply displaying the link as a play button. At the end when the player has inputted all of their guesses, it was a matter of revealing the song titles after clicking the button. This was done using AngularJS (which I had learned earlier in the class).</p>
+					</div>
+					<div class="col-sm-7">
+						<figure class="figure">
+							<img src="../img/spotify/example.png" class="figure-img">
+							<figcaption class="figure-caption text-xs-left"><i>Example game being played</i></figcaption>
+						</figure>
+					</div>
+				</div>
+
+				<h1>The Finishing Touches</h1>
+				<div class="container-fluid">
+					<div class="col-sm-6">
+						<figure class="figure">
+							<img src="../img/spotify/notfound.png" class="figure-img">
+							<figcaption class="figure-caption text-xs-left"><i>Error appears when invalid artist is entered</i></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6">
+						<p>AngularJS was a very important framework that I used to help with the smaller, finer points of the project. This included when items (such as the Submit button) were displayed when a game was being played or when they were hidden (such as when the player first arrives at the website). Extra attention was also required for other use cases such as restarting the game or if an artist was not found. These were taken into consideration to provide the best user experience possible when playing.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section><!-- end main -->
+</body>
+</html>

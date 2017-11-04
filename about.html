@@ -1,72 +1,176 @@
+	
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Alison Wong</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Portfolio"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alison Wong</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Alison Wong Portfolio" />
 
-	<!-- Bootstrap -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="shortcut icon" href="favicon.ico">
+		
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Flexslider -->
+		<link rel="stylesheet" href="css/flexslider.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
-</head>
+		<link rel="stylesheet" id="theme-switch" href="css/style.css">
+		
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Cookie -->
+		<script src="js/jquery.cookie.js"></script>
+		<script>
+		if ( $.cookie('styleCookie') === 'style-light.css') {
+			$('html, body').css('background', '#eeeeee');
+		} else if ($.cookie('styleCookie') === 'style.css') {
+			$('html, body').css('background', '#222222');
+		}
+		
+		</script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
 
-<body>
-	<header>
-		<div class="logo">
-			<a href="index.html"><h2 id="name">HI, I'M ALISON</h2></a>
-			<h4 id="tagline">Aspiring UX Designer</h4>
-		</div><!-- end logo -->
+		<!-- Viewport Units Buggyfill -->
+		<script src="js/viewport-units-buggyfill.js"></script>
 
-		<div id="menu_icon"></div>
-		<nav>
+		<!-- Main JS  -->
+		<script src="js/main.js"></script>
+
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	
+	<!-- Loader -->
+	<div class="fh5co-loader"></div>
+	
+	<div id="fh5co-page">
+		<nav id="fh5co-nav" role="navigation">
 			<ul>
-				<li><a href="index.html">Portfolio</a></li>
-				<li><a href="about.html" class="selected">About</a></li>
-				<li><a href="resume.pdf" target="_blank">Resume</a></li>
-				<li><a href="mailto:wongalisonk@gmail.com">Contact</a></li>
+				<li class="animate-box"><a href="index.html" class="transition">Portfolio</a></li>
+				<li class="animate-box fh5co-active"><a href="about.html" class="transition">About</a></li>
 			</ul>
-		</nav><!-- end navigation menu -->
-
-		<div class="footer clearfix">
-			<div class="rights">
-				<p>Copyright © 2017</p>
-			</div><!-- end rights -->
-		</div ><!-- end footer -->
-	</header><!-- end header -->
-
-	<section class="main clearfix">
-		<section class="about top">	
-			<div class="wrapper content_header clearfix">
-				<h1 class="title">About Me</h1>
-			</div>		
-		</section><!-- end top -->
-
-		<section class="wrapper" id="top">
-			<div class="content">
-				<div class="container-fluid">
-					<div class="col-sm-4">
-						<img src="img/about/profile.jpg" class="profile"/>
-					</div>
-					<div class="col-sm-1"></div>
-					<br>
-					<div class="col-sm-6">
-						<h2>Hey!</h2>
-						<p>You're here which means that you want to learn more about me. That's fantastic! I'm currently in my 4th year at the University of Washington and will be graduating with a B.S. in Informatics with a focus on Human-Computer Interaction (HCI) in June of 2017. I am pursuing a career as a UX and interaction designer.</p>
-						<p>I was born and raised in Seattle. Outside of school I enjoy playing video games and outdoor recreation. In my free time I love to go indoor bouldering, kayaking, and hiking!</p>
-						<h4>Got any more questions? Send them to me at <a href="mailto:wongalisonk@gmail.com">wongalisonk@gmail.com</a>!</h4>
-						<br>
+		</nav>
+		<header id="fh5co-header" role="banner" class="fh5co-project js-fh5co-waypoint no-border" data-colorbg="#222222" data-next="yes">
+			<div class="container">
+				<div class="fh5co-text-wrap animate-box">
+					<div class="fh5co-intro-text">
+						<h1>Who Am I <span>&amp;</span> What I do </h1>
 					</div>
 				</div>
 			</div>
-		</section>
-	</section><!-- end main -->
-</body>
+			<div class="btn-next animate-box fh5co-learn-more">
+				<a href="#" class="scroll-btn">
+					<span>Find out more</span>
+					<i class="icon-chevron-down"></i>
+				</a>
+			</div>
+		</header>
+
+		<div class="js-fh5co-waypoint fh5co-project-detail" id="fh5co-main" data-colorbg="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row animate-box row-bottom-padded-sm">
+
+							<div class="col-md-3">
+							</div>
+							<div class="col-md-9">
+								<img id="me-img" src="images/me.JPG"><br><br>
+							</div>
+
+							<!-- About -->
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">N<sup>o</sup> 1</span> Bio</h3>
+							</div>
+							<div class="col-md-9">
+								<p>Hey there! I'm a Seattle based designer who loves to create products that are usable, useful, and beautiful. I'm currently aiming to find a home with a team that values creativity, innovation, and enthusiasm.</p>
+								<p>I am a strong advocate in user centric and data driven design. I believe in not making assumptions and the power in identifying user needs and frustrations to improve usability and enjoyment for users.</p>
+								<p>I'm also a devoted Pacific Northwesterner which means I enjoy spending my time outdoors climbing, hiking, biking, and anything else that helps me get out there and see mother nature in all her glory.</p>
+							</div>
+						</div>
+
+						<!-- Philosophy -->
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">N<sup>o</sup> 2</span> Philosophy</h3>
+							</div>
+							<div class="col-md-9">
+								<h3 id="quote">"Listen, respond, react"</h3>
+								<p>People love to give out criticism but rarely enjoy receiving any. Something that I've had to learn in the past few years is understanding that feedback and criticism I receive on my work is not targeted towards me personally. I've learned the value of feedback and the advantages of a new perspective. So with that being said, what exactly do I mean by <i>"listen, respond, react"</i>?</p>
+								<p>Well the first part, <i>listen</i>, is straightforward, but can sometimes be difficult to do. People never to hear their work be criticized. But I've learned to listen. Like, actually listen to what people are telling me. Whether it's fellow designers or end users. Sometimes I hear input that's insightful and useful. Other times I disagree. Which brings us to <i>respond</i>. This is where I get to voice my opinions and ask questions. Why do you think this is better? Or, I still think my idea is better and here's why. It's the chance for me to either clarify why changes are necessary or to defend my designs. From there, we move onto <i>reacting</i>. This is where I use the feedback to make the necessary changes in my designs.</p>
+							</div>
+						</div>
+
+						<!-- Motto -->
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">N<sup>o</sup> 3</span> Motto</h3>
+							</div>
+							<div class="col-md-9">
+								<h3 id="quote">"Kill your babies"</h3>
+								<p>It was a motto I learned in my first design class and one that has stuck with me ever since. In other others, I needed to learn how to let go of my precious and beloved ideas that I had become emotionally invested in. That didn't mean starting over every time I hit a wall or experienced a block, but understanding that even if I have invested hour (or even days) of my life on an idea, it is holding me back. I like this motto because it sounds a bit morbid, but it's memorable.</p>
+							</div>
+						</div>	
+
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">N<sup>o</sup> 4</span> Resume</h3>
+							</div>
+							<div class="col-md-9">
+								<a href="alisonwong_resume.pdf" target="_blank" class="btn btn-light btn-outline"><i class="icon-eye"></i> View</a>
+								<a href="alisonwong_resume.pdf" download class="btn btn-light btn-outline"><i class="icon-download"></i> Download</a>
+							</div>
+						</div>
+
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">N<sup>o</sup> 5</span> Connect</h3>
+							</div>
+							<div class="col-md-9">
+								<ul class="fh5co-social fh5co-stack">
+									<li>
+										<a href="mailto:wongalisonk@gmail.com"><i class="icon-mail2"></i> wongalisonk@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" class="js-fh5co-waypoint">
+			<nav id="fh5co-nav" role="navigation">
+				<ul>
+					<li class="animate-box"><a href="index.html" class="transition">Portfolio</a></li>
+					<li class="animate-box fh5co-active"><a href="about.html" class="transition">About</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	</body>
 </html>
+

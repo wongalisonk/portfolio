@@ -1,80 +1,193 @@
-$(document).ready(function(){
+;(function () {
+	
+	'use strict';
 
 
 
-    //mobile menu toggling
-    $("#menu_icon").click(function(){
-        $("header nav ul").toggleClass("show_menu");
-        $("#menu_icon").toggleClass("close_menu");
-        return false;
+	// iPad and iPod detection	
+	var isiPad = function(){
+		return (navigator.platform.indexOf("iPad") != -1);
+	};
+
+	var isiPhone = function(){
+	    return (
+			(navigator.platform.indexOf("iPhone") != -1) || 
+			(navigator.platform.indexOf("iPod") != -1)
+	    );
+	};
+
+
+	// Go to next section
+	var gotToNextSection = function(){
+		var el = $('.fh5co-learn-more'),
+			w = el.width(),
+			divide = -w/2;
+		el.css('margin-left', divide);
+	};
+
+	// Loading page
+	var loaderPage = function() {
+		$(".fh5co-loader").fadeOut("slow");
+	};
+
+
+
+	// Scroll Next
+	var ScrollNext = function() {
+		$('body').on('click', '.scroll-btn', function(e){
+			e.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $( $(this).closest('[data-next="yes"]').next()).offset().top
+			}, 1000, 'easeInOutExpo');
+			return false;
+		});
+	};
+
+	
+
+	var styleToggle = function() {
+
+		
+		if ( $.cookie('styleCookie') !== undefined ) {
+			if ( $.cookie('styleCookie') === 'style-light.css'  ) { 
+				
+				$('.js-style-toggle').attr('data-style', 'light');
+			} else  {
+				$('.js-style-toggle').attr('data-style', 'default');
+			}
+			$('#theme-switch').attr('href', 'css/' + $.cookie('styleCookie'));
+		} 
+
+
+		if ( $.cookie('btnActive') !== undefined ) $('.js-style-toggle').addClass($.cookie('btnActive'));
+		
+
+
+
+		// $('.js-style-toggle').on('click', function(){
+		$('body').on('click','.js-style-toggle',function(event){
+
+			
+
+			var data = $('.js-style-toggle').attr('data-style'), style = '', $this = $(this);
+
+			if ( data === 'default') {
+
+				// switch to light
+				style = 'style-light.css';
+				$this.attr('data-style', 'light');
+
+				// add class active to button
+				$.cookie('btnActive', 'active', { expires: 365, path: '/'});
+				$this.addClass($.cookie('btnActive'));
+				
+
+			} else {
+				// switch to dark color
+				style = 'style.css';
+				$this.attr('data-style', 'default');
+
+				// remove class active from button
+				$.removeCookie('btnActive', { path: '/' });
+				$(this).removeClass('active'); 
+
+				// switch to style
+				$.cookie('styleCookie', style, { expires: 365, path: '/'});
+
+			}
+
+			// switch to style 
+			$.cookie('styleCookie', style, { expires: 365, path: '/'});
+
+			// apply the new style
+			$('#theme-switch').attr('href', 'css/' + $.cookie('styleCookie'));
+				
+			
+			event.preventDefault();
+
+		});
+		
+	}
+	
+	// Animations
+
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.animate-box').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+
+					$('body .animate-box.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							el.addClass('fadeInUp animated');
+							el.removeClass('item-animate');
+						},  k * 200, 'easeInOutExpo' );
+					});
+					
+				}, 100);
+				
+			}
+
+		} , { offset: '95%' } );
+	};
+	
+
+	var moreProjectSlider = function() {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			animationLoop: false,
+			itemWidth: 310,
+			itemMargin: 20,
+			controlNav: false
+		});
+	}
+	
+
+	// Document on load.
+	$(function(){
+		
+		gotToNextSection();
+		loaderPage();
+		ScrollNext();
+		moreProjectSlider();
+		styleToggle();
+		
+		// Animate
+		contentWayPoint();
+
+	});
+
+
+}());
+
+
+$(document).ready(function() {
+
+	$("body").css("display", "none");
+
+    $("body").fadeIn(2000);
+    $("body").stop().animate({
+    	opacity: 1
     });
 
-    
 
-    //Contact Page Map Centering
-    var hw = $('header').width() + 50;
-    var mw = $('#map').width();
-    var wh = $(window).height();
-    var ww = $(window).width();
+	$("a.transition").click(function(event){
 
-    $('#map').css({
-        "max-width" : mw,
-        "height" : wh
-    });
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(1000, redirectPage);		
 
-    if(ww>1100){
-         $('#map').css({
-            "margin-left" : hw
-        });
-    }
-
-   
-
-
-
-    //Tooltip
-    $("a").mouseover(function(){
-
-        var attr_title = $(this).attr("data-title");
-
-        if( attr_title == undefined || attr_title == "") return false;
-        
-        $(this).after('<span class="tooltip"></span>');
-
-        var tooltip = $(".tooltip");
-        tooltip.append($(this).data('title'));
-
-         
-        var tipwidth = tooltip.outerWidth();
-        var a_width = $(this).width();
-        var a_hegiht = $(this).height() + 3 + 4;
-
-        //if the tooltip width is smaller than the a/link/parent width
-        if(tipwidth < a_width){
-            tipwidth = a_width;
-            $('.tooltip').outerWidth(tipwidth);
-        }
-
-        var tipwidth = '-' + (tipwidth - a_width)/2;
-        $('.tooltip').css({
-            'left' : tipwidth + 'px',
-            'bottom' : a_hegiht + 'px'
-        }).stop().animate({
-            opacity : 1
-        }, 200);
-       
-
-    });
-
-    $("a").mouseout(function(){
-        var tooltip = $(".tooltip");       
-        tooltip.remove();
-    });
-
-
+	});
+		
+	function redirectPage() {
+		window.location = linkLocation;
+	}
+	
 });
-
-
-
-
-

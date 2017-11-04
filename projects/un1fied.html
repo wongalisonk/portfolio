@@ -1,227 +1,360 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>UN1FIED Smartwatch &mdash; Alison Wong</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Portfolio"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>UN1FIED Smartwatch&mdash; Alison Wong</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Alison Wong Portfolio" />
 
-	<!-- Bootstrap -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="shortcut icon" href="../favicon.ico">
+		
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/animate.css">
+		<!-- Flexslider -->
+		<link rel="stylesheet" href="../css/flexslider.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="../css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/bootstrap.css">
 
-	<link rel="stylesheet" type="text/css" href="../css/reset.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="../icon.ico" />
-</head>
+		<link rel="stylesheet" id="theme-switch" href="../css/style.css">
+		
+		<!-- jQuery -->
+		<script src="../js/jquery.min.js"></script>
+		<!-- jQuery Cookie -->
+		<script src="../js/jquery.cookie.js"></script>
+		<script>
+		if ( $.cookie('styleCookie') === 'style-light.css') {
+			$('html, body').css('background', '#eeeeee');
+		} else if ($.cookie('styleCookie') === 'style.css') {
+			$('html, body').css('background', '#222222');
+		}
+		
+		</script>
+		<!-- jQuery Easing -->
+		<script src="../js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="../js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="../js/jquery.flexslider-min.js"></script>
 
-<body>
-	<header>
-		<div class="logo">
-			<a href="../index.html"><h2 id="name">HI, I'M ALISON</h2></a>
-			<h4 id="tagline">Aspiring UX Designer</h4>
-		</div><!-- end logo -->
+		<!-- Viewport Units Buggyfill -->
+		<script src="../js/viewport-units-buggyfill.js"></script>
 
-		<div id="menu_icon"></div>
-		<nav>
+		<!-- Main JS  -->
+		<script src="../js/main.js"></script>
+
+		<!-- Modernizr JS -->
+		<script src="../js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	
+	<!-- Loader -->
+	<div class="fh5co-loader"></div>
+	
+	<div id="fh5co-page">
+		<nav id="fh5co-nav" role="navigation">
 			<ul>
-				<li><a href="../index.html" class="selected">Portfolio</a></li>
-				<li><a href="../about.html">About</a></li>
-				<li><a href="../resume.pdf" target="_blank">Resume</a></li>
-				<li><a href="mailto:wongalisonk@gmail.com">Contact</a></li>
+				<li class="animate-box"><a href="../index.html" class="transition">Portfolio</a></li>
+				<li class="animate-box"><a href="../about.html" class="transition">About</a></li>
 			</ul>
-		</nav><!-- end navigation menu -->
-
-		<div class="footer clearfix">
-			<div class="rights">
-				<p>Copyright © 2017</p>
-			</div><!-- end rights -->
-		</div ><!-- end footer -->
-	</header><!-- end header -->
-
-	<section class="main clearfix">
-		<section class="un1fied top">	
-			<div class="wrapper content_header clearfix">
-				<div class="work_nav">			
-					<ul class="btn clearfix">
-						<li><a href="../index.html" class="grid" data-title="Portfolio"></a></li>
-						<li><a href="myclubs.html" class="next" data-title="Next: MyClubs"></a></li>
-					</ul>							
-				</div><!-- end work_nav -->
-				<h1 class="title">UN1FIED Smartwatch</h1>
-				<h3 class="subtitle">Mobile Application Design</h3>
-			</div>		
-		</section><!-- end top -->
-
-		<section class="wrapper" id="top">
-			<div class="content">
-				<h1><center>Overview</center></h1>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<center><p><i>"Your goal is to create a new design language for a new mobile operating system. Not iOS, Android or Windows, but something entirely new. You and your team will use, iterate and adapt this design language over the course of the quarter to design the core apps. All of your apps should look and feel like they are part of the same family."</i></p></center>
-						<p>Smartwatches are still relatively new, and have not taken off like other technology (smartphones, tablets, etc.). My team of 8 decided to try to tackle this problem because we found a lot of potential, with a lot of <b>room for creativity and innovation.</b> Through some initial user research, we found that many people did not see how a smartwatch was better than a smartphone. There was a <b>quality of life aspect that was lacking.</b></p>
-					</div>
-					<div class="col-sm-1"></div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-						<figure class="figure">
-							<img src="../img/un1fied/color_palette.png" class="figure-img">
-						</figure>
-					</div>
-					<div class="col-sm-2"></div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h1>Research &amp; Ideation</h1>
-						<h2>Creating a Design Language</h2>
-						</p>Initially, the team believed that the smartwatch was not adopted because it had to be paired to a smartphone. Because of this requirement, users saw a smartwatch as performing the <b>same functions, but on a smaller screen with more limited interactions.</b> We began our project by conducting a brief user survey to understand the current state of smartwatches in two populations: people who already owned a smartwatch and people who were tech savvy but did not own a smartwatch. We found that people wanted a smartwatch to be paired with their smartphone, but offer a more seamless experience.</p>
+		</nav>
+		<header id="fh5co-header" role="banner" class="fh5co-project js-fh5co-waypoint no-border" data-colorbg="#222222" data-next="yes">
+			<div class="container">
+				<div id="test" class="fh5co-text-wrap animate-box">
+					<div class="fh5co-intro-text">
+						<h1>UN1FIED Smartwatch</h1>
+						<h2>Exploring new possibilities from your wrist</h2>
 					</div>
 				</div>
-				<div class="container-fluid">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-					<blockquote>“I think the point of a smartwatch isn't to replace a cellphone, it's to <b>enhance your experience</b> with one and <b>optimize the functionality</b> on a convenient, easier-to-access display. In ideal implementation, you would be able to <b>keep your cellphone completely on silent</b> (not even on vibrate) and handle messages and calls with <b>subtlety.</b>"</blockquote>
-					</div>
-				</div>
-				<br>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<p>With these results, we discussed what design language would drive our development: <b>versatile, easy to use, fast, and beautiful.</b></p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-						<figure class="figure">
-							<img src="../img/un1fied/language.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i>Intial brainstorming</i></figcaption>
-						</figure>
-					</div>
-					<div class="col-sm-2"></div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h1>The User's POV</h1>
-						<p>Since our team had a mix of Mac and PC users we decided to used <a href="http://www.figma.com/" target="_blank">Figma</a> to create prototypes. We chose this because of the focus on collaboration and since everything was saved online, it was easy to share all the changes. For the hardware, our team wanted to design on a <b>circular interface</b> because it emulated the timeless design of normal watches and felt more <b>elegant.</b> Additionally, a physical bezel was also implemented as a less obstructive interaction method since users would not have to interact on the screen. This left more of the screen available for display pertinent information.</p>
-
-						<p>Our smartwatch differentiates from a smartphone in that it focuses on <b>limited the amount of necessary interactions.</b> We accomplished this through focusing on <b>user flows.</b> and evaluating what the user wants to do <b><i>in the moment.</i></b> keeping only the most essential functions displayed on the watch. Rather than attempting to achieve all functionality available on a phone, we optimized the most common interactions and made them <b>easier to do.</b></p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-8">
-						<figure class="figure">
-							<img src="../img/un1fied/prototyping.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i>Some prototyping for the hardware and application of the smartwatch</i></figcaption>
-						</figure>
-					</div>
-					<div class="col-sm-2"></div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h1>Weather</h1>
-						<h2>Iterations</h2>
-						<p>For the first iteration of the weather application, I looked towards Google and my iPhone for inspiration and a <b>starting point.</b> I noted <b>what information was emphasized</b> and the order the information was presented in. From there the first iteration I created was based heavily on the <b>iPhone weather app.</b> I removed some of the information I deemed less pertinent and presented this iteration to my team. The <b>feedback and critique</b> I received showed me that I had deviated too far from design language and needed to <b>reevaluate what I wanted</b> the weather application to provide. My team pushed me to think more <b>in context of how and <i>when</i> the user would use it.</b></p>
-						<figure class="figure">
-							<img src="../img/un1fied/weather_iteration.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i><br>Iteration 1 of the weather application which had confusing interactions and lacked strong user-centric design</i></figcaption>
-						</figure>		
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h2>Final Screens</h2>
-						<p>To focus on the <b>“in the moment”</b> aspect, the weather application first displays the current temperature at the user’s current location. Turning the bezel displays the <b>hourly information.</b> Flipping the “coin” displays the forecast for the current day while turning the bezel shows the user the daily forecast for the upcoming days (at the user’s current location).</p>
-
-						<p><b>Icons are used in place of text</b> whenever possible so that the information can be read <b>at a glance.</b> Because of the limited screen size, only the most <b>pertinent</b> information is shown. For the hourly forecast, this included the <b>time, type of weather (clear, cloudy, rainy, etc.), the current degrees, and the chance of rain.</b> For the daily/weekly forecast, this included the <b>day of the week, type of weather,  and high/low for the day.</b> The quick menu was kept as simple as possible, allowing the user to toggle between temperature scales (Fahrenheit or Celsius).</p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<figure class="figure">
-							<img src="../img/un1fied/weather.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i>Top screens are the hourly forecast, bottom screens display the weekly forecase. The last screen depicts the quick menu</i></figcaption>
-						</figure>						
-					</div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h1>Contacts &amp; Dialer</h1>
-						<h2>Iterations</h2>
-						<p>Our team focused heavily on <b>"embracing the circular design"</b>, but we <b>focused on the wrong aspects</b> and emphasized the use of circles instead. For the early iterations, I used circles on the sides to indicate to the users that there was more information. This resulted in a <b>cramped interface</b> and readability was virtually <b>nonexistent.</b> During the critique session, my team sat down and talked about the <b>necessity of certain features</b>. As a result, I removed pictures and labels because the information they provided was <b>redundant</b> which we did not have room for in such a small design space.</p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<figure class="figure">
-							<img src="../img/un1fied/contacts_iteration.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i><br>Early iteration of the contacts and dialer screens, with a focus on the circular design and bezel interactions</i></figcaption>
-						</figure>						
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h2>Final Contacts Screens</h2>
-						<p>The contacts focused on <b>fast information retrieval.</b> Rotating the bezel quickly scrolls through contacts by letter rather than by name. Each contact displays the option to either <b>call or message.</b> When selecting the call option, the circular interface would flip over <b>(“coin flip”)</b> and display the saved numbers for the contact as well as the <b>type</b> (mobile, phone, work, etc.).</p>
-						<p>There is no option to add a new contact or updating an existing contact because the functionality is <b>not commonly used.</b> Our apps are focused on facilitating the most common functions of a smartphone <b> quickly and efficiently.</b></p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<figure class="figure">
-							<img src="../img/un1fied/contacts.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i>First two screens show navigating a contact's information. Third screen displays fast scrolling. Final screen depicts the quick menu (toggling between contacts list, dialer, and call history).</i></figcaption>
-						</figure>						
-					</div>
-				</div>
-				<br>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h2>Final Dialer &amp; Calls Screens</h2>
-						<p>The dialer has an emphasis on the <b>circular interface and rotating bezel.</b> It is meant to mimic the older style of rotary phones, but in a more efficient manner. The <b>most common call features</b> are the ones kept in the design. This included <b>muting, accessing the dial pad, and adding people to the call.</b> Incoming calls allow for a quick access to a reject message to easily handle calls in busy situations (such as meetings). This means handling calls with <b>subtlety and easy.</b> </p>
-					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<figure class="figure">
-							<img src="../img/un1fied/dialer.png" class="figure-img">
-	  						<figcaption class="figure-caption text-xs-left"><i>First screen shows the dialer. Next three screens display the different types of interactions with phone calls.</i></figcaption>
-						</figure>						
-					</div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<h1>Future Viability</h1>
-						<p>For many people on our team, it was their first time applying UX principles and designing UI. Only one of us owned a smartwatch or have interacted extensively with one. Designing for a small, circular interface was also very challenging. It forced me to <b>explain and defend all of my design decisions.</b> The lack of proper prototyping tools also forced our team to adapt for user testing (most tools do not provide methods for testing a round smarwatch interface). Even in our team of 8, designing for a circular interface proved a complex challenge to undertake in 10 weeks. I believe we have provided a strong foundation to do more work, with heavy user testing needed to be completed.</p>
-					</div>
-				</div>
-
 			</div>
-		</section>
-	</section><!-- end main -->
-</body>
+			<div class="btn-next animate-box fh5co-learn-more">
+				<a href="#" class="scroll-btn">
+					<span>See the detail</span>
+					<i class="icon-chevron-down"></i>
+				</a>
+			</div>
+		</header>
+
+		<div class="js-fh5co-waypoint fh5co-project-detail" id="fh5co-main" data-colorbg="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row animate-box row-bottom-padded-sm ">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading">Stats</h3>
+							</div>
+							<div class="col-md-9">
+								<h4 class="subheader">Duration</h4>
+								<p>Autumn 2016 (Oct. to Dec.)</p>
+								<h4 class="subheader">Roles</h4>
+								<p>User Researcher, UX Designer, UI Designer, Product Designer</p>
+								<h4 class="subheader">Team</h4>
+								<p>Kevin Chiu, Vansh Gambhir, Sean Ker, Daniel Hoang, Jeff Ma, Anirudh Ramanathan &amp; Shang Yang</p>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading">Problem</h3>
+							</div>
+							<div class="col-md-9">
+								<p>People are adverse against smartwatches due to preconceptions that they are an inferior version of their smartphone. The small screen and decreased interaction capabilities are off putting. Our team was tasked with creating the stock applications for an entirely new smartwatch of our own creation.</p>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading">Solution</h3>
+							</div>
+							<div class="col-md-9">
+								<p>UN1FIED Smartwatch is has 13 applications designed to integrate with smartphone seamlessly by enhancing the most commonly used functions of a phone. By making the most frequent interactions as simple as possible, people can leave their phones in their pockets and go about their day.</p>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading">Objectives</h3>
+							</div>
+							<div class="col-md-9">
+								<ol class="fh5co-inline">
+									<li>Design the operating system (i.e. stock applications) for a smartwatch that is intuitive, versatile, easy to use, and beautiful.</li>
+									<li>Create an experience that enhances a user’s experience with their smartphone by optimizing the most common functionalities.</li>
+								</ol>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<img class="banner" src="../images/un1fied/u_banner.png" />
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 1</span> Research</h3>
+							</div>
+							<div class="col-md-9">
+								<p>The goal of this phase was to better understand the perception of smartwatches of both smartwatch owners and nonowners. The survey had a total of 74 respondents, 11 of which were smartwatch owners.</p>
+								<h4 class="subheader">Goals for Smartwatch Owners</h4>
+								<p>The most important insights that we were looking for from the survey data were:<br>(1) the most commonly used features/apps</p>
+								<img src="../images/un1fied/owner_apps.png" />
+								<p>(2) the features users liked the most and why and, (3) the features that needed to be changed or added From the survey, we also hoped to discover the most popular smartwatches to conduct an informal competitor analysis.</p>
+								<img src="../images/un1fied/competitors.png" />
+								<h4 class="subheader">Goals for Non-Smartwatch Owners</h4>
+								<p>From the survey population that did not own smartwatches the most important question we wanted to answer was <i>why not?</i> From the survey, we wanted to learn why people did not own a smartwatch (besides costs) and what features or apps would appeal to them in a smartwatch.</p>
+								<h4 class="subheader">Insights</h4>
+								<p> Most people perceived that smartwatches were meant to perform exactly as a smartphone, but with a less seamless (i.e. clunky) experience. As a result, people's understanding of a smartwatch was <i>"why would I want to waste money on an inferior device when my phone does it all better."</i></p>
+								<p>The biggest turn off for people from both target populations was, unsurprisingly, the small screen size. People also expressed a desire to spend as little time interacting with a smartwatch as possible.</p>
+								<p> The top desired apps smartwatch nonowners wanted were navigation apps (such as Google maps, bus times, and travel times) and health-based apps (calorie tracking, pedometer, and heart rate monitor).</p>
+								<h4 class="subheader">Summary</h4>
+								<p>Two overarching ideas carried us over to the next phase of our project:</p>
+								<ol class="fh5co-inline">
+									<li>Users don't want a smartwatch to replace their cellphone, but rather to enhance their experience with one and optimize the functionality.</li><br>
+									<img id="list" src="../images/un1fied/nonowner_phone.png" />
+									<li>A smartwatch does not need to have all the functionality of a smartphone, but rather optimizes the most common tasks that a smartphone does by making it faster.</li><br>
+									<img id="list" src="../images/un1fied/nonowner_apps.png" />
+								</ol>
+							</div>
+						</div>
+
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 2</span> Design Language</h3>
+							</div>
+							<div class="col-md-9">
+								<h4 class="subheader">Guidelines</h4>
+									<p>To achieve consistency in our designs across our team, we sat down and created a design language and a style guide that would facilitate our design process.</p>
+									<img src="../images/un1fied/language.png">
+									<p>Our design language consisted of four concepts created from our user research and brainstorming session. It was used to evaluate the effectiveness of our design in achieving user goals.</p>
+									<div class="col-md-6">
+										<div class="col-md-3"><img src="../images/un1fied/a.png" /></div>
+										<div class="col-md-9">
+										<h4 class="subheader2">Adaptable</h4>
+										<p>The ability for users to use their watch in various settings by enabling them to interact with it using either their voice or fingers.</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="col-md-3"><img src="../images/un1fied/b.png" /></div>
+										<div class="col-md-9">
+										<h4 class="subheader2">Easy to Use</h4>
+										<p>The learning curve is gradual and the interface is intuitive, enabling users to navigate the watch with only one or two interactions.</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="col-md-3"><img src="../images/un1fied/c.png" /></div>
+										<div class="col-md-9">
+										<h4 class="subheader2">Fast</h4>
+										<p>Any goals for the user can be completed in as little number of taps or interactions as possible.</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="col-md-3"><img src="../images/un1fied/d.png" /></div>
+										<div class="col-md-9">
+										<h4 class="subheader2">Beautiful</h4>
+										<p>An inviting interface that uses modern UI patterns so the transition from a phone or computer to our watch is seamless and smooth.</p>
+										</div>
+									</div>
+							</div>
+						</div>
+
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 3</span> Style Guide</h3>
+							</div>
+							<div class="col-md-9">
+								<p>While the design language was the framework to shape our thinking and approach to the design, the style guide was created to achieve consistency on the smaller details. This included details such as the color palette, typography, iconography, and some general UI patterns.</p>
+								<img src="../images/un1fied/color_palette.png" />
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 4</span> Hardware</h3>
+							</div>
+							<div class="col-md-9">
+								<p>A balance of form and functionality was achieved by keeping the hardware as clean and minimal as possible while still allowing users to navigate easily.</p>
+								<p>To maximize the use of the limiting screen size, the hardware was designed so that all interactions can be completed via the hardware of the watch and not the screen itself.</p>
+								<h4 class="subheader">Prototyping</h4>
+								<p>Several screen shapes were considered, such as the band (left), square (similar to the Apple Watch), and a curved rectangular screen shape (right).</p>
+								<img src="../images/un1fied/prototype_early.png" />
+								<p>After we finalized the screen shape, we created paper prototypes to get a better sense of how the UI would look to scale.</p>
+								<img src="../images/un1fied/prototyping.png" />
+								<h4 class="subheader">Finalized Hardware Specs</h4>
+								<p>To emulate the elegant and timeless design of classic watches we created a smartwatch with a circular interface. Specific interactions are shown in the image below.</p>
+								<h4 class="subheader2">Hands Free Gestures/Interactions</h4>
+								<p>Another consideration we explored was the idea of hands free interactions. Since these interactions were for niche cases (used for one functionality in a specific app) they were not implemented in the final design.</p>
+								<img src="../images/un1fied/hardware.png" />
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 5</span> Conceptualization</h3>
+							</div>
+							<div class="col-md-9">
+								<p> For each stock application, our team would sit down and sketch out as many ideas as possible for a given app in a 5-minute timeframe. Afterwards, we would meet back up and discuss our ideas as a team. During these meetings we would consider things like, what are the similarities between the designs? are there any unique designs worth considering for the next iteration?, and what features would be unrealistic to implement?</p>
+								<img src="../images/un1fied/process.png" />
+								<h4 class="subheader">Low-Fidelity Mockups</h4>
+								<p>With 12 apps to tackle in 10 weeks, our team decided to divide and conquer. We split our team of 8 into two smaller teams of 3 and a group of 2. After the initial big team brainstorming session, it was up to the smaller teams to use those ideas and distill them into an initial mockup/prototype.</p>
+								<img src="../images/un1fied/lowfidelity.png" />
+								<h4 class="subheader2">Big Picture First, Details Later</h4>
+								<p>The first stage was focused on what information would be included and emphasis on user interactions. This stage was focused on evaluating how effective the information flow was in terms of what the user needed. The biggest challenge was striking a balance between providing the user with enough information, but not forcing them to interact with the watch excessively.</p>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 6</span> Iterate</h3>
+							</div>
+							<div class="col-md-9">
+								<p>The biggest question I found myself asking myself was <i>"what information can I get rid of? What doesn't the user need?"</i> It was easy to want to cram in as much information as possible across multiple screens. The most important thing was understanding the only information that was necessary was the information a user needed <i>in the moment</i> because if a user wanted more information, they would use their phone instead.</p>
+								<h4 class="subheader">Weather (1st Iteration)</h4>
+								<img src="../images/un1fied/weather_iteration.png" />
+								<h4 class="subheader2">Problems</h4>
+								<p>Information was scattered across too many screens. The initial mockups for the weather application was trying to convey the same amount of information as a phone application.</p>
+								<h4 class="subheader">Contacts (1st Iteration)</h4>
+								<img src="../images/un1fied/contacts_iteration.png" />
+								<h4 class="subheader2">Problems</h4>
+								<p>The intent of the partial circles on either side was to inform the user that more contacts were available. However, what ended up happening was that the information in the middle (the important information) was too small and as a result, hard to see.</p>
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 7</span> Final Mockups</h3>
+							</div>
+							<div class="col-md-9">
+								<h4 class="subheader">Calendar</h4>
+								<img src="../images/un1fied/calendar.png" />
+								<h4 class="subheader">Alarm</h4>
+								<img src="../images/un1fied/alarm.png" />
+								<h4 class="subheader">Dialer</h4>
+								<img src="../images/un1fied/dialer.png" />
+								<h4 class="subheader">Health</h4>
+								<img src="../images/un1fied/health.png" />
+								<h4 class="subheader">Weather</h4>
+								<img src="../images/un1fied/weather.png" />
+							</div>
+						</div>
+
+						<div class="row row-bottom-padded-sm animate-box">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading"><span class="fh5co-number">Step 8</span> Reflection</h3>
+							</div>
+							<div class="col-md-9">
+								<h4 class="subheader">Lessons Learned</h4>
+								<p>Big teams are hard to work with. Everyone has an opinion and never do we all agree on something unanimously. It takes a group effort to get work done and most of the effort requires constant, open, and honest communication. Also, circular interfaces are <i>really</i> hard to design for.</p>
+								<p>In the future when working in larger groups, having structured meetings are a necessity. This means going in with goals for the meeting and cutting discussions short if needed.</p>
+							</div>
+						</div>
+
+						<div class="row animate-box row-bottom-padded-sm">
+							<div class="col-md-3">
+								<h3 class="fh5co-section-heading">More Projects</h3>
+							</div>
+							<div class="col-md-9">
+								<div class="flexslider">
+								  	<ul class="slides">
+								    	<li>
+								    		<div class="project">
+								      			<a href="gameofthrones.html" class="transition"><img src="../images/gameofthrones/g_banner.png" />
+								      				<div class="overlay">
+								      					<h4>Game of Thrones</h4>
+								      					<h5>Data Visualization</h5>
+								      				</div>
+								      			</a>
+								      		</div>
+								    	</li>
+							    		<li>
+							    			<div class="project">
+								      			<a href="bookwurm.html" class="transition"><img src="../images/bookwurm/b_banner.png" />
+								      				<div class="overlay">
+								      					<h4>BookWurm</h4>
+								      					<h5>Mobile Design</h5>
+								      				</div>
+								      			</a>
+								      		</div>
+								    	</li>
+								    	<li>
+								   			<div class="project">
+								      			<a href="streamsurfer.html" class="transition"><img src="../images/streamsurfer/s_banner.png" />
+								      				<div class="overlay">
+								      					<h4>StreamSurfer</h4>
+								      					<h5>Web Design</h5>
+								      				</div>
+							      				</a>
+								      		</div>
+								    	</li>
+								  	</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" class="js-fh5co-waypoint">
+			<nav id="fh5co-nav" role="navigation">
+				<ul>
+					<li class="animate-box"><a href="../index.html" class="transition">Portfolio</a></li>
+					<li class="animate-box"><a href="../about.html" class="transition">About</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	</body>
 </html>
+

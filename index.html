@@ -1,81 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Alison Wong </title>
-	<meta charset="utf-8">
-	<meta name="description" content="Portfolio"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
-</head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alison Wong</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Alison Wong Portfolio" />
 
-<body>
-	<header>
-		<div class="logo">
-			<a href="#"><h2 id="name">HI, I'M ALISON</h2></a>
-			<h4 id="tagline">Aspiring UX Designer</h4>
-		</div><!-- end logo -->
+		<link rel="shortcut icon" href="favicon.ico">
+		
+		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Flexslider -->
+		<link rel="stylesheet" href="css/flexslider.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
 
-		<div id="menu_icon"></div>
-		<nav>
+		<link rel="stylesheet" id="theme-switch" href="css/style.css">
+		
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Cookie -->
+		<script src="js/jquery.cookie.js"></script>
+		<script>
+		if ( $.cookie('styleCookie') === 'style-light.css') {
+			$('html, body').css('background', '#eeeeee');
+		} else if ($.cookie('styleCookie') === 'style.css') {
+			$('html, body').css('background', '#222222');
+		}
+		
+		</script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+
+		<!-- Viewport Units Buggyfill -->
+		<script src="js/viewport-units-buggyfill.js"></script>
+
+		<!-- Main JS  -->
+		<script src="js/main.js"></script>
+
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	<!-- Loader -->
+	<div class="fh5co-loader"></div>
+	
+	<div id="fh5co-page">
+		<nav id="fh5co-nav" role="navigation">
 			<ul>
-				<li><a href="#" class="selected">Portfolio</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="resume.pdf" target="_blank">Resume</a></li>
-				<li><a href="mailto:wongalisonk@gmail.com">Contact</a></li>
+				<li class="animate-box fh5co-active"><a href="index.html" class="transition">Portfolio</a></li>
+				<li class="animate-box"><a href="about.html" class="transition">About</a></li>
 			</ul>
-		</nav><!-- end navigation menu -->
-
-		<div class="footer clearfix">
-			<div class="rights">
-				<p>Copyright © 2017</p>
-			</div><!-- end rights -->
-		</div ><!-- end footer -->
-	</header><!-- end header -->
-
-	<!-- projects -->
-	<section class="main clearfix">
-		<!-- UN1FIED -->
-		<div class="work">
-			<a href="projects/un1fied.html">
-				<img src="img/un1fied/thumbnail.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>UN1FIED Smartwatch</h1>
-						<h4>Mobile Application Design</h4>
+		</nav>
+		
+		<header id="fh5co-header" role="banner" class="fh5co-project js-fh5co-waypoint no-border" data-colorbg="#222222" data-next="yes">
+			<div class="container">
+				<div class="fh5co-text-wrap animate-box">
+					<div class="fh5co-intro-text">
+						<h1>Hello, my name is<br><img id="name" src="images/name.png">I'm a UX Designer</h1>
 					</div>
 				</div>
-			</a>
-		</div>
+			</div>
+			<div class="btn-next animate-box fh5co-learn-more">
+				<a href="#" class="scroll-btn">
+					<span>Check out my portfolio!</span>
+					<i class="icon-chevron-down"></i>
+				</a>
+			</div>
+		</header>
 
-		<!-- MyClubs -->
-		<div class="work">
-			<a href="projects/myclubs.html">
-				<img src="img/myclubs/thumbnail.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>MyClubs</h1>
-						<h4>Mobile Application Design</h4>
+		<!-- UN1FIED Smartwatch -->
+		<div class="fh5co-project js-fh5co-waypoint fh5co-reverse" data-colorbg="" data-next="yes">
+			<div class="container">
+				<div class="fh5co-project-inner row">
+					<div class="fh5co-imgs col-md-8 col-md-push-4 animate-box">
+						<div class="img-holder-1 animate-box">
+							<a href="projects/un1fied.html"><img src="images/un1fied/u_banner.png" /></a>
+						</div>
+					</div>
+					<div class="fh5co-text col-md-4 col-md-pull-8 animate-box">
+						<a href="projects/un1fied.html"><h2>UN1FIED Smartwatch</h2></a>
+						<p>A fresh take on the smartwatches that focuses on doing what you need, when you need to, faster.</p>
+						<p><a href="projects/un1fied.html" class="btn btn-light btn-outline transition">View Project</a></p>
 					</div>
 				</div>
-			</a>
+			</div>
 		</div>
-
-		<!-- DawgPound -->
-		<div class="work">
-			<a href="projects/dawgpound.html">
-				<img src="img/dawgpound/thumbnail.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>DawgPound Beer</h1>
-						<h4>Website Redesign</h4>
+		
+		<!-- Game of Thrones Data Visualization -->
+		<div class="fh5co-project js-fh5co-waypoint" data-colorbg="" data-next="yes">
+			<div class="container">
+				<div class="fh5co-project-inner row">
+					<div class="fh5co-imgs col-md-8 animate-box">
+						<div class="img-holder-1 animate-box">
+							<a href="projects/gameofthrones.html"><img src="images/gameofthrones/g_banner.png" /></a>
+						</div>
+					</div>
+					<div class="fh5co-text col-md-4 animate-box">
+						<a href="projects/gameofthrones.html"><h2>Game of Thrones Data Visualization</h2></a>
+						<p>A breakdown of the 704 deaths in that happened during seasons 1-5 of HBO's Game of Thrones.</p>
+						<p><a href="projects/gameofthrones.html" class="btn btn-light btn-outline transition">View Project<i class="arrow-right"></i></a></p>
 					</div>
 				</div>
-			</a>
+
+			</div>
 		</div>
-	</section><!-- end main -->	
-</body>
+
+		<!-- BookWurm -->
+		<div class="fh5co-project js-fh5co-waypoint fh5co-reverse" data-colorbg="">
+			<div class="container">
+				<div class="fh5co-project-inner row">
+					<div class="fh5co-imgs col-md-8 col-md-push-4 animate-box">
+						<div class="img-holder-1 animate-box">
+							<a href="projects/bookwurm.html"><img src="images/bookwurm/b_banner.png" /></a>
+						</div>
+					</div>
+					<div class="fh5co-text col-md-4 col-md-pull-8 animate-box">
+						<a href="projects/bookwurm.html"><h2>BookWurm</h2></a>
+						<p>BookWurm makes reading a fun habit again with a new take on how to track your reading.</p>
+						<p><a href="projects/bookwurm.html" class="btn btn-light btn-outline transition">View Project</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- StreamSurfer -->
+		<div class="fh5co-project js-fh5co-waypoint" data-bgcolor="" data-next="yes">
+			<div class="container">
+				<div class="fh5co-project-inner row">
+					<div class="fh5co-imgs col-md-8 animate-box">
+						<div class="img-holder-1 animate-box">
+							<a href="projects/streamsurfer.html"><img src="images/streamsurfer/s_banner.png" /></a>
+						</div>
+					</div>
+					<div class="fh5co-text col-md-4 animate-box">
+						<a href="projects/bookwurm.html"><h2>StreamSurfer</h2></a>
+						<p>A search engine for finding legal sources of your TV shows and movies.</p>
+						<p><a href="projects/streamsurfer.html" class="btn btn-light btn-outline transition">View Project</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" class="js-fh5co-waypoint">
+			<nav id="fh5co-nav" role="navigation">
+				<ul>
+					<li class="animate-box fh5co-active"><a href="index.html" class="transition">Portfolio</a></li>
+					<li class="animate-box"><a href="about.html" class="transition">About</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	</body>
 </html>
